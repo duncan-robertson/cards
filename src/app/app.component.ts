@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NotesService } from './notes.service';
+
+import { Note } from './Note';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  notes: Note[];
+
+  constructor(private notesService: NotesService) {}
+
+  ngOnInit() {
+    this.notes = this.notesService.getNotes();
+  }
 }

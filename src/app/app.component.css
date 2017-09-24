@@ -1,0 +1,19 @@
+.container {
+  width: 80%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.cardList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-right: -2em;
+  margin-bottom: -2em;
+}
+
+card {
+  margin-right: 2em;
+  margin-bottom: 2em;
+}

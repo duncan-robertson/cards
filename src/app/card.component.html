@@ -1,6 +1,15 @@
-<div class="card">
+<span class="card">
   <div class="buffer">
-      <div>Value: {{value}} Suit: {{suit}}</div>
-      <div class="upsidedown">Value: {{value}} Suit: {{suit}}</div>
+      <div class="cardTitle">
+        <h3>
+          {{title}}
+        </h3
+      ></div>
+      <div *ngIf="content" class="cardContent">
+        {{content}}
+      </div>
+      <div *ngIf="!content" class="cardContent">
+          <ng-content></ng-content>
+      </div>
   </div>
-</div>
+</span>

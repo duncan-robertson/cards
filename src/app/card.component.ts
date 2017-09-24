@@ -6,15 +6,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-  @Input() value: number;
-  @Input() suit: number;
+  @Input() title: string;
+  @Input() content: string;
 
   constructor() {
-    if (!this.value) {
-      this.value = 5;
-    }
-    if (!this.suit) {
-      this.suit = 1;
+    if (!this.title) {
+      this.title = 'Title';
     }
   }
 }
